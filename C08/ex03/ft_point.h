@@ -1,34 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-jadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 12:44:18 by sel-jadi          #+#    #+#             */
-/*   Updated: 2023/09/30 18:46:11 by sel-jadi         ###   ########.fr       */
+/*   Created: 2023/10/02 15:50:26 by sel-jadi          #+#    #+#             */
+/*   Updated: 2023/10/02 17:19:37 by sel-jadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+typedef struct s_point
 {
-	unsigned int	len;
-	unsigned int	i;
-
-	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	if (size > 0)
-	{
-		while (src[i] != '\0' && (i < size - 1))
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (len);
-}
+	int	x;
+	int	y;
+}	t_point;
+#endif

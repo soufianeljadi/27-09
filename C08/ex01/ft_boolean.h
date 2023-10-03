@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_boolean.h                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-jadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 12:44:18 by sel-jadi          #+#    #+#             */
-/*   Updated: 2023/09/30 18:46:11 by sel-jadi         ###   ########.fr       */
+/*   Created: 2023/10/02 15:48:46 by sel-jadi          #+#    #+#             */
+/*   Updated: 2023/10/03 15:39:40 by sel-jadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#ifndef FT_BOOLEAN_H
+# define FT_BOOLEAN_H
+# include <unistd.h>
+# define EVEN(nbr) (nbr % 2 == 0)
+# define EVEN_MSG "I have an even number of arguments.\n"
+# define ODD_MSG "I have an odd number of arguments.\n"
+# define SUCCESS 0
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+typedef enum u_bool
 {
-	unsigned int	len;
-	unsigned int	i;
-
-	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	if (size > 0)
-	{
-		while (src[i] != '\0' && (i < size - 1))
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (len);
-}
+	FALSE,
+	TRUE
+}	t_bool;
+#endif

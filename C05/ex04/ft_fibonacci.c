@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-jadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 12:44:18 by sel-jadi          #+#    #+#             */
-/*   Updated: 2023/09/30 18:46:11 by sel-jadi         ###   ########.fr       */
+/*   Created: 2023/09/30 18:34:01 by sel-jadi          #+#    #+#             */
+/*   Updated: 2023/10/01 16:27:49 by sel-jadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_fibonacci(int index)
 {
-	unsigned int	len;
-	unsigned int	i;
-
-	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	if (size > 0)
-	{
-		while (src[i] != '\0' && (i < size - 1))
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (len);
+	if (index < 0)
+		return (-1);
+	else if (index < 2)
+		return (index);
+	else
+		return (ft_fibonacci(index - 1) + (ft_fibonacci(index - 2)));
 }
+
+/*
+int	main(void)
+{
+	printf("%d\n", ft_fibonacci(4));
+}*/

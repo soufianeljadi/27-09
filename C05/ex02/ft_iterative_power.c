@@ -6,7 +6,7 @@
 /*   By: sel-jadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 17:06:47 by sel-jadi          #+#    #+#             */
-/*   Updated: 2023/09/25 17:17:01 by sel-jadi         ###   ########.fr       */
+/*   Updated: 2023/10/01 16:26:31 by sel-jadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,7 @@ int	ft_iterative_power(int nb, int power)
 	}
 	return (r);
 }
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {

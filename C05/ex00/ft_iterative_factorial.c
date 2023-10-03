@@ -6,7 +6,7 @@
 /*   By: sel-jadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/25 16:21:28 by sel-jadi          #+#    #+#             */
-/*   Updated: 2023/09/25 16:32:53 by sel-jadi         ###   ########.fr       */
+/*   Updated: 2023/10/01 16:25:40 by sel-jadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ int	ft_iterative_factorial(int nb)
 	}
 	return (f);
 }
-/*
-#include <stdio.h>
+/*#include <stdio.h>
 
 int	main(void)
 {

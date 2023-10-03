@@ -1,34 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_recursive_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sel-jadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/16 12:44:18 by sel-jadi          #+#    #+#             */
-/*   Updated: 2023/09/30 18:46:11 by sel-jadi         ###   ########.fr       */
+/*   Created: 2023/09/30 18:29:17 by sel-jadi          #+#    #+#             */
+/*   Updated: 2023/10/01 16:26:52 by sel-jadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+int	ft_recursive_power(int nb, int power)
 {
-	unsigned int	len;
-	unsigned int	i;
+	int	r;
 
-	i = 0;
-	len = 0;
-	while (src[len])
-		len++;
-	if (size > 0)
-	{
-		while (src[i] != '\0' && (i < size - 1))
-		{
-			dest[i] = src[i];
-			i++;
-		}
-		dest[i] = '\0';
-	}
-	return (len);
+	r = 1;
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	else
+		return (nb * ft_recursive_power(nb, power - 1));
 }
+/*
+int	main(void)
+{
+	printf("%d\n", ft_recursive_power(5, 3));
+}*/
