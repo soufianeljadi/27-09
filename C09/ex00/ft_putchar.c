@@ -6,11 +6,11 @@
 /*   By: sel-jadi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/03 18:24:16 by sel-jadi          #+#    #+#             */
-/*   Updated: 2023/10/04 16:08:48 by sel-jadi         ###   ########.fr       */
+/*   Updated: 2023/10/04 17:27:55 by sel-jadi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd..h>
+#include <unistd.h>
 
 void	ft_putchar(char a)
 {
